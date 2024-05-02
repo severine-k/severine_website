@@ -1,0 +1,15 @@
+---
+title: "Welcome to my Dear Data postcard"
+description: |
+  put your explanation/reflection here.
+
+output: distill::distill_article
+---
+<img src="postcard1.PNG" style="margin:0 auto; width: 800px">
+
+
+<img src="postcard2.PNG" style="margin:0 auto; width: 800px">
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
