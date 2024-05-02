@@ -6,7 +6,7 @@
       "description": "put your explanation/reflection here.\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-05-02T11:34:54+02:00"
+      "last_modified": "2024-05-02T15:47:25+02:00"
     },
     {
       "path": "index.html",
@@ -14,14 +14,14 @@
       "description": "Welcome to my digital space where I merge healthcare expertise with a passion for data and design. Here, you’ll find insights into health data analytics, reflections on my journey in nursing, and explorations of how data can transform patient care. Dive into my blog for latest updates, visit the portfolio section to see my projects, or learn more about my background on the About page. Enjoy your stay!\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-05-02T11:34:55+02:00"
+      "last_modified": "2024-05-02T15:47:26+02:00"
     },
     {
       "path": "new_about_me.html",
       "title": "Severine Kouagheu",
       "author": [],
       "contents": "\r\n\r\n          \r\n          \r\n          Sevryn_site\r\n          \r\n          \r\n          Home\r\n          My Shiny App\r\n          My New Analysis\r\n          My Dear Data postcard\r\n          About\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Severine Kouagheu\r\n          \r\n          \r\n            \r\n              Hello! I’m a licensed nurse currently advancing my\r\n              expertise with a Master of Science in Health Data\r\n              Analytics. My journey in healthcare is driven by a passion\r\n              to integrate clinical knowledge with data-driven insights,\r\n              aiming to improve patient outcomes and healthcare\r\n              efficiencies.\r\n              Beyond my professional life, I have a deep appreciation\r\n              for the finer things in life like fashion, photography,\r\n              and the joy of experiencing new things. I believe in\r\n              living life to the fullest and finding beauty in everyday\r\n              moments.\r\n              Family and faith are central to my life. Residing in\r\n              Ayer with my loved ones and drawing strength from my faith\r\n              in God, I find balance and inspiration in both my personal\r\n              and professional endeavors.\r\n              Whether through my academic pursuits or when capturing\r\n              life’s beauty through a camera lens, I strive to bring\r\n              passion and precision to everything I do. I look forward\r\n              to connecting with like-minded professionals and exploring\r\n              opportunities that blend my healthcare expertise with my\r\n              love for data and aesthetics.\r\n            \r\n            \r\n              Hello! I’m a licensed nurse currently advancing my\r\n              expertise with a Master of Science in Health Data\r\n              Analytics. My journey in healthcare is driven by a passion\r\n              to integrate clinical knowledge with data-driven insights,\r\n              aiming to improve patient outcomes and healthcare\r\n              efficiencies.\r\n              Beyond my professional life, I have a deep appreciation\r\n              for the finer things in life like fashion, photography,\r\n              and the joy of experiencing new things. I believe in\r\n              living life to the fullest and finding beauty in everyday\r\n              moments.\r\n              Family and faith are central to my life. Residing in\r\n              Ayer with my loved ones and drawing strength from my faith\r\n              in God, I find balance and inspiration in both my personal\r\n              and professional endeavors.\r\n              Whether through my academic pursuits or when capturing\r\n              life’s beauty through a camera lens, I strive to bring\r\n              passion and precision to everything I do. I look forward\r\n              to connecting with like-minded professionals and exploring\r\n              opportunities that blend my healthcare expertise with my\r\n              love for data and aesthetics.\r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Twitter\r\n                  \r\n                \r\n                                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Email\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
-      "last_modified": "2024-05-02T11:34:56+02:00"
+      "last_modified": "2024-05-02T15:47:26+02:00"
     },
     {
       "path": "new_analysis.html",
@@ -29,7 +29,7 @@
       "description": "An in-depth analysis of healthcare utilization during the flu and COVID-19 pandemic, focusing on disparities across different races and ethnicities. This study highlights areas that may require targeted healthcare interventions.\n",
       "author": [],
       "contents": "\r\n\r\n\r\n# Load necessary libraries\r\nlibrary(readr)\r\nlibrary(dplyr)\r\nlibrary(ggplot2)\r\n\r\n# Read the dataset\r\nhealth_data <- read_csv(\"healthcare data.csv\")\r\n\r\n# Prepare data for plotting\r\ncase_data <- health_data %>%\r\n  group_by(race, ethnicity) %>%\r\n  summarise(flu_cases = sum(flu_2022), covid_cases = sum(covid), .groups = 'drop')\r\n\r\n# Plotting the data\r\nggplot(case_data, aes(x = race, y = flu_cases, fill = ethnicity)) +\r\n  geom_bar(stat = \"identity\", position = position_dodge()) +\r\n  facet_wrap(~ethnicity, scales = \"free_y\") +\r\n  labs(title = \"Flu and COVID-19 Cases by Race and Ethnicity\",\r\n       x = \"Race\",\r\n       y = \"Number of Cases\",\r\n       fill = \"Ethnicity\") +\r\n  theme_minimal() +\r\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\r\n\r\n\r\n\r\nI visualize the distribution of flu and COVID-19 cases across different races and ethnicities, and see how healthcare services were utilized by these groups. This analysis might provide insights into healthcare accessibility or outreach effectiveness during the pandemic.\r\nThis approach provides two separate plots:\r\nFlu Cases:\r\nDisplays the number of flu cases recorded in the dataset for each race, divided by ethnicity.\r\nCOVID-19 Cases:\r\nSimilar to the flu cases plot but for COVID-19.\r\nThese visualizations can help identify disparities in healthcare coverage or disease impact among different demographic groups, highlighting areas where healthcare interventions might need to be focused.\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-05-02T11:34:57+02:00"
+      "last_modified": "2024-05-02T15:47:29+02:00"
     },
     {
       "path": "shiny_app.html",
@@ -37,7 +37,7 @@
       "description": "Lets dive into the data and explore the car market trends..\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-05-02T11:34:58+02:00"
+      "last_modified": "2024-05-02T15:47:29+02:00"
     }
   ],
   "collections": []
